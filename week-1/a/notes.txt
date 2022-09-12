@@ -1,0 +1,58 @@
+1. imread function : 
+    	* imread() method loads an image from the specified file 	
+	* returns image in the form of matrix
+    	* In case of missing of file or lack of permission the method returns empty matrix
+
+
+	syntax : cv2.imread( path, flag = 1 ) 
+	parameters : 
+		path : path of the image with file name ( includes extension ) 
+		flag : 
+ 				IMREAD_COLOR	= 1
+        		IMREAD_GRAYSCALE 	= 0
+        		IMREAD_UNCHANGED 	= -1
+
+2. imshow method : 
+	* imshow() method is used to display the image 
+	* the window automatically fits to image size 
+	
+	syntax : cv2.imshow( window_name, image ) 
+	parameters : 
+		window_name	: name of the resultant window
+		image 	: object ( matrix ) returned from imread function
+
+3. resize method : 
+	* resize() method used to change the size of the image frame 
+	* returns image matrix of resized image 
+	* if in case of empty matrix, it raises exception
+
+	syntax : cv2.resize( input_image, resized_dimensions ) 
+	parameters : 
+		input_image : the original image want to resize
+		resized_dimensions : tuple of new width and height 
+
+4. imwrite method : 
+	* imwrite() method is used to save the image 
+	* this method will save the image according to specified format
+	* returns true in case of successful saving otherwise false
+
+	syntax : cv2.imwrite( file_name, image ) 
+	parameters : 
+		file_name : the name of the file name with path and extension
+		image : image matrix 
+
+5. waitKey method : 
+	* it used to display the window for specific milliseconds or certain key press action
+	* 
+
+	syntax : cv2.waitKey( time_period ) 
+	parameters : 
+		time_period : 
+			if time_period = 0 then window will display for keypress action
+			else the window displayed for time_period milli seconds 
+
+6. destoryAllWindows method : 
+	* it is used to close all windows 
+	* similar to destroyWindow method which is used to close particular window by its name 
+
+	* syntax : cv2.destoryAllWindows()

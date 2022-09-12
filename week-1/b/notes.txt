@@ -1,0 +1,28 @@
+1. VideoCapture Class : 
+	* it used to read video or image from storage or camera or any live stream 
+	* it takes a parameter as index of camera or file name 
+	* returns the VideoCapture object 
+	
+	syntax : 
+		a. cv2.VideoCapture( file_name ) : name of file with path and extension
+		b. cv2.VideoCapture( index )  : index of camera
+	methods : 
+		a. isOpened method : returns True if videocapture still running else False 
+		b. read method :	   
+			returns the boolean, current frame and moves to next frame
+		c. release method : 
+			releases the access to file or camera device
+
+2. VideoWriter Class : 
+	* it used to write video file 
+	* 
+	syntax : 
+		cv2.VideoWriter(
+    			path, 
+    			cv2.VideoWriter_fourcc(),
+    			frames_per_second,
+    			size
+		)
+		
+ 	a. write( frame ) method : used to write frame into file
+	b. release() method : releases the access from the file
